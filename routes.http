@@ -1,11 +1,11 @@
-# it should get the books list
-http://localhost:5050/books
+# OK! - it should get the books list
+GET http://localhost:5050/books
 
 ###
-# it should get the book #1
-http://localhost:5050/books/1
+# OK! - it should get the book #1
+GET http://localhost:5050/books/1
 
-### it should create a new book
+### OK! - it should create a new book
 POST http://localhost:5050/books HTTP/1.1
 content-type: application/json
 
@@ -32,4 +32,4 @@ content-type: application/json
 }
 
 ### it should delete book #1
-DELETE http://localhost:5050/books/1 HTTP/1.1
+DELETE http://localhost:5050/books/4 HTTP/1.1

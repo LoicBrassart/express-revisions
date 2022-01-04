@@ -1,7 +1,11 @@
 const express = require('express');
 const { backPort } = require('./conf');
+const booksRoutes = require('./routes/books');
 
 const app = express();
+app.use(express.json());
+
+app.use('/books', booksRoutes);
 
 // 404 Error
 app.use('/', (req, res) => {
