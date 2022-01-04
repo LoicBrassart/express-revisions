@@ -1,0 +1,35 @@
+# it should get the books list
+http://localhost:5050/books
+
+###
+# it should get the book #1
+http://localhost:5050/books/1
+
+### it should create a new book
+POST http://localhost:5050/books HTTP/1.1
+content-type: application/json
+
+{
+  "title": "A Song Of Ice And Fire",
+  "genre": "fantasy",
+  "year": 2000,
+  "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/9/93/AGameOfThrones.jpg/220px-AGameOfThrones.jpg",
+  "artist": "George R R Martin",
+  "summary": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by the American author George R. R. Martin. It was first published on August 1, 1996. The novel won the 1997 Locus Award[2] and was nominated for both the 1997 Nebula Award[2] and the 1997 World Fantasy Award.[3] The novella Blood of the Dragon, comprising the Daenerys Targaryen chapters from the novel, won the 1997 Hugo Award for Best Novella. In January 2011, the novel became a New York Times Bestseller[4] and reached No. 1 on the list in July 2011.[5]"
+}
+
+### it should update book #1
+PUT http://localhost:5050/books/1 HTTP/1.1
+content-type: application/json
+
+{
+  "title": "Tchoupi à l'Ecole",
+  "genre": "slice-of-life",
+  "year": 2000,
+  "picture": "https://upload.wikimedia.org/wikipedia/commons/5/5f/T%27choupi_%28cropped%29.jpg",
+  "artist": "Thierry Courtin",
+  "summary": "Tchoupi va à l'école... Ouais, bon, c'est pas de la grande littérature non plus hein !"
+}
+
+### it should delete book #1
+DELETE http://localhost:5050/books/1 HTTP/1.1
