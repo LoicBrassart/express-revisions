@@ -1,5 +1,5 @@
-CREATE DATABASE `express-revisions`;
-USE `express-revisions`;
+CREATE DATABASE expressrevisions;
+USE expressrevisions;
 CREATE TABLE `books` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NULL,
@@ -8,7 +8,7 @@ CREATE TABLE `books` (
   `artist` VARCHAR(255) NULL,
   `summary` LONGTEXT NULL,
   `year` INT NULL,
-  PRIMARY KEY (`idbooks`));
+  PRIMARY KEY (`id`));
 
 INSERT INTO books
   (title, genre, picture, artist, summary, year)
